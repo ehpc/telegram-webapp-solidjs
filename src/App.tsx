@@ -9,16 +9,8 @@ const App: Component = () => {
       <header class={styles.header}>
         <img src={logo} class={styles.logo} alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          This is the front page of a Telegram Mini App.
         </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Test 1
-        </a>
       </header>
     </div>
   );
