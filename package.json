@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@cfworker/web": "^5.0.5",
+    "@telegram-apps/sdk-solid": "^3.0.1",
     "cfworker-middleware-telegraf": "^2.0.2",
     "solid-js": "^1.9.3",
     "telegraf": "^4.16.3"

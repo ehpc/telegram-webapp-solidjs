@@ -4,4 +4,7 @@ export {};
 declare global {
 	const BOT_TOKEN: string;
 	const SECRET_PATH: string;
+	const WORKER_NAME: string;
+	const BOT_DOMAIN: string;
+	const WEBAPP_URL: string;
 }
