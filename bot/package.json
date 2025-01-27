@@ -1,0 +1,32 @@
+{
+  "name": "telegram-webapp-bot",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "pnpm build && wrangler deploy --name telegram-webapp-bot",
+    "start": "pnpm build && wrangler dev dist/worker.js --local-protocol https",
+    "build": "webpack -c webpack.config.js",
+    "test": "vitest",
+    "set-webhook": "ts-node ./src/set-webhook.ts",
+    "get-webhook": "ts-node ./src/get-webhook.ts",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@cfworker/web": "^1",
+    "cfworker-middleware-telegraf": "^2.0.2",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.5.41",
+    "@cloudflare/workers-types": "^4.20250121.0",
+    "dotenv": "^16.4.7",
+    "node-polyfill-webpack-plugin": "^4.1.0",
+    "ts-loader": "^9.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "vitest": "2.1.8",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "wrangler": "^3.105.1"
+  }
+}
