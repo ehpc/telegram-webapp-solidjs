@@ -27,7 +27,8 @@ bot.command("webapp", (ctx) => {
     chatId,
   };
   const jsonParams = JSON.stringify(params);
-  const base64Params = Buffer.from(jsonParams).toString("base64url");
+  const base64Params = Buffer.from(jsonParams).toString("base64");
+  console.log("URL:", `${WEBAPP_URL}?startapp=${base64Params}`);
   return ctx.reply(link("Launch", `${WEBAPP_URL}?startapp=${base64Params}`));
 });
 
